@@ -100,7 +100,7 @@ Do not invent qualifications, employment history, awards, additional executives,
 - **Display / a11y:** SPAAVS  
 - **Wordmark:** SPΛΛVS  
 - **Descriptor:** Smart Parking & Autonomous Vehicle Services  
-- **Tagline:** Turning Parking Into Possibility.  
+- **Tagline:** Beyond Parking. Intelligent Mobility. Autonomous Infrastructure. (synced from Spaavs.com)  
 - **Status:** In development  
 - **Button:** Explore SPAAVS → `/ventures/spaavs`
 

@@ -59,9 +59,17 @@ export const spaavs = {
   wordmark: "SPΛΛVS",
   a11yName: "SPAAVS",
   descriptor: "Smart Parking & Autonomous Vehicle Services",
-  tagline: "Turning Parking Into Possibility.",
+  /** Synced from Spaavs.com siteConfig (merged main). */
+  tagline: "Beyond Parking. Intelligent Mobility. Autonomous Infrastructure.",
+  taglineParts: [
+    "Beyond Parking",
+    "Intelligent Mobility",
+    "Autonomous Infrastructure",
+  ] as const,
   status: "In development",
   href: "/ventures/spaavs",
+  /** Intended public site; keep internal detail page until DNS/hosting is verified live. */
+  externalUrl: "https://spaavs.com",
   exploreButton: "Explore SPAAVS",
   descriptions: [
     "SPAAVS is the trading name for Jadz Smart Parking and Autonomous Vehicle Services, a subsidiary of Jadz Holdings LLC. It is developing a platform that connects human drivers, parking facilities, vehicle-service providers, and fleet systems.",
@@ -329,7 +337,7 @@ export const pages = {
     seo: {
       title: "SPAAVS",
       description:
-        "SPAAVS — Smart Parking & Autonomous Vehicle Services. Turning Parking Into Possibility. A Jadz Holdings subsidiary in development.",
+        "SPAAVS — Smart Parking & Autonomous Vehicle Services. Beyond Parking. Intelligent Mobility. Autonomous Infrastructure. A Jadz Holdings subsidiary in development.",
     },
   },
   floqmediaPage: {

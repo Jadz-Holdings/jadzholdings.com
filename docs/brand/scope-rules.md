@@ -33,7 +33,7 @@ Feature publicly:
 
 SPAAVS visual wordmark: **SPΛΛVS**. Accessibility labels and metadata: **SPAAVS**.
 
-SPAAVS tagline (confirmed from brief; Spaavs.com repo was stub-only at build time): **Turning Parking Into Possibility.**
+SPAAVS tagline (synced from Spaavs.com `siteConfig`, merged main): **Beyond Parking. Intelligent Mobility. Autonomous Infrastructure.**
 
 ---
 

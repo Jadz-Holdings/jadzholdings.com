@@ -17,7 +17,9 @@ export default function SpaavsPage() {
             {spaavs.wordmark}
           </p>
           <p style={{ color: "var(--muted)", fontWeight: 650, margin: 0 }}>{spaavs.descriptor}</p>
-          <h1 style={{ maxWidth: "18ch", marginTop: "0.85rem" }}>{spaavs.tagline}</h1>
+          <h1 style={{ maxWidth: "22ch", marginTop: "0.85rem", fontSize: "clamp(1.6rem, 3.2vw, 2.4rem)" }}>
+            {spaavs.tagline}
+          </h1>
           <p className="status-badge spaavs">{spaavs.status}</p>
         </div>
       </section>

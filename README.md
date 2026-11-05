@@ -49,3 +49,12 @@ Copy `.env.example` to `.env.local` for local configuration. Keep credentials ou
 - `npm run build` — production build
 - `npm run start` — serve production build
 - `npm run lint` — ESLint
+
+## Deploy
+
+The app is a standard Next.js project (`vercel.json` included). Connect the GitHub repo to Vercel (or similar) and set:
+
+- `NEXT_PUBLIC_SITE_URL=https://jadzholdings.com`
+- `RESEND_API_KEY` / `CONTACT_TO_EMAIL` / `CONTACT_FROM_EMAIL` for form delivery
+
+Until form env vars are set, the Contact page shows email and phone links instead of a live form.

@@ -389,8 +389,12 @@ img {
 .split {
   display: grid;
   gap: 2.5rem;
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
   align-items: start;
+}
+
+.split > * {
+  min-width: 0;
 }
 
 .media-panel {
@@ -665,13 +669,17 @@ img {
   cursor: pointer;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 960px) {
   .grid-3,
   .grid-2,
   .split,
   .form-row,
   .footer-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .split {
+    gap: 1.75rem;
   }
 
   .desktop-nav {

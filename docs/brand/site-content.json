@@ -32,15 +32,36 @@
       "href": "/contact"
     },
     "links": [
-      { "label": "About", "href": "/about" },
-      { "label": "Our Ventures", "href": "/ventures" },
-      { "label": "Our Approach", "href": "/approach" },
-      { "label": "Partnerships", "href": "/partnerships" },
-      { "label": "Contact", "href": "/contact" }
+      {
+        "label": "About",
+        "href": "/about"
+      },
+      {
+        "label": "Our Ventures",
+        "href": "/ventures"
+      },
+      {
+        "label": "Our Approach",
+        "href": "/approach"
+      },
+      {
+        "label": "Partnerships",
+        "href": "/partnerships"
+      },
+      {
+        "label": "Contact",
+        "href": "/contact"
+      }
     ],
     "footerLegalLinks": [
-      { "label": "Privacy", "href": "/privacy" },
-      { "label": "Terms", "href": "/terms" }
+      {
+        "label": "Privacy",
+        "href": "/privacy"
+      },
+      {
+        "label": "Terms",
+        "href": "/terms"
+      }
     ]
   },
   "footer": {
@@ -60,8 +81,14 @@
         "eyebrow": "JADZ HOLDINGS",
         "headline": "Building businesses that connect technology with everyday life.",
         "paragraph": "Jadz Holdings develops ventures at the intersection of digital platforms, media, mobility (including autonomous vehicle), and services. We focus on practical opportunities to improve how people move, connect, and engage with the places around them.",
-        "primaryButton": { "label": "Explore Our Ventures", "href": "/ventures" },
-        "secondaryButton": { "label": "Discuss a Partnership", "href": "/partnerships" }
+        "primaryButton": {
+          "label": "Explore Our Ventures",
+          "href": "/ventures"
+        },
+        "secondaryButton": {
+          "label": "Discuss a Partnership",
+          "href": "/partnerships"
+        }
       },
       "supportingStatement": "From smarter parking to engaging venue experiences, our work connects software, services, and real-world needs.",
       "foundation": {
@@ -84,12 +111,18 @@
       },
       "portfolioPreview": {
         "headline": "Explore what we are building.",
-        "featured": ["spaavs", "floqmedia"]
+        "featured": [
+          "spaavs",
+          "floqmedia"
+        ]
       },
       "closing": {
         "headline": "Build the next opportunity with us.",
         "paragraph": "We welcome conversations with operators, property owners, service providers, technology companies, and strategic collaborators who see opportunities to build useful businesses together.",
-        "button": { "label": "Start a Conversation", "href": "/contact" }
+        "button": {
+          "label": "Start a Conversation",
+          "href": "/contact"
+        }
       }
     },
     "about": {
@@ -120,13 +153,18 @@
       },
       "headline": "Distinct ventures. A connected approach.",
       "introduction": "Jadz Holdings is developing businesses across mobility, media, and digital platforms. Each venture has its own customers, product direction, and path to market.",
-      "portfolioOrder": ["spaavs", "floqmedia", "damme", "topvr"]
+      "portfolioOrder": [
+        "spaavs",
+        "floqmedia",
+        "damme",
+        "topvr"
+      ]
     },
     "spaavs": {
       "path": "/ventures/spaavs",
       "seo": {
         "title": "SPAAVS",
-        "description": "SPAAVS — Smart Parking & Autonomous Vehicle Services. Turning Parking Into Possibility. A Jadz Holdings subsidiary in development."
+        "description": "SPAAVS — Smart Parking & Autonomous Vehicle Services. Beyond Parking. Intelligent Mobility. Autonomous Infrastructure. A Jadz Holdings subsidiary in development."
       },
       "ventureKey": "spaavs"
     },
@@ -206,7 +244,10 @@
       ],
       "closing": {
         "copy": "Tell us about your organization, the opportunity you see, and where you believe our work could connect.",
-        "button": { "label": "Discuss a Partnership", "href": "/contact" },
+        "button": {
+          "label": "Discuss a Partnership",
+          "href": "/contact"
+        },
         "directContactLine": "Email info@jadzholdings.com or call (571) 628-2444."
       }
     },
@@ -226,12 +267,42 @@
       "form": {
         "title": "Send an inquiry",
         "fields": [
-          { "id": "name", "label": "Full name", "required": true, "type": "text" },
-          { "id": "email", "label": "Email address", "required": true, "type": "email" },
-          { "id": "company", "label": "Company or organization", "required": false, "type": "text" },
-          { "id": "phone", "label": "Phone number", "required": false, "type": "tel" },
-          { "id": "interest", "label": "Area of interest", "required": true, "type": "select" },
-          { "id": "message", "label": "Message", "required": true, "type": "textarea" }
+          {
+            "id": "name",
+            "label": "Full name",
+            "required": true,
+            "type": "text"
+          },
+          {
+            "id": "email",
+            "label": "Email address",
+            "required": true,
+            "type": "email"
+          },
+          {
+            "id": "company",
+            "label": "Company or organization",
+            "required": false,
+            "type": "text"
+          },
+          {
+            "id": "phone",
+            "label": "Phone number",
+            "required": false,
+            "type": "tel"
+          },
+          {
+            "id": "interest",
+            "label": "Area of interest",
+            "required": true,
+            "type": "select"
+          },
+          {
+            "id": "message",
+            "label": "Message",
+            "required": true,
+            "type": "textarea"
+          }
         ],
         "interestOptions": [
           "Jadz Holdings corporate inquiry",
@@ -275,7 +346,7 @@
       "a11yName": "SPAAVS",
       "legalRelationship": "SPAAVS is the trading name for Jadz Smart Parking and Autonomous Vehicle Services, a subsidiary of Jadz Holdings LLC.",
       "descriptor": "Smart Parking & Autonomous Vehicle Services",
-      "tagline": "Turning Parking Into Possibility.",
+      "tagline": "Beyond Parking. Intelligent Mobility. Autonomous Infrastructure.",
       "status": "In development",
       "href": "/ventures/spaavs",
       "exploreButton": "Explore SPAAVS",
@@ -297,7 +368,14 @@
       "branding": {
         "preserveGreen": true,
         "primaryGreen": "#1F8A4C"
-      }
+      },
+      "taglineParts": [
+        "Beyond Parking",
+        "Intelligent Mobility",
+        "Autonomous Infrastructure"
+      ],
+      "externalUrl": "https://spaavs.com",
+      "taglineSource": "Synced from Spaavs.com siteConfig (merged main), Nov 2026"
     },
     "floqmedia": {
       "id": "floqmedia",
@@ -351,8 +429,15 @@
     }
   },
   "exclusions": {
-    "ventureCards": ["Papi’s", "Papis", "DonPapi", "Club Technology"],
-    "products": ["FLOQ SOS"],
+    "ventureCards": [
+      "Papi’s",
+      "Papis",
+      "DonPapi",
+      "Club Technology"
+    ],
+    "products": [
+      "FLOQ SOS"
+    ],
     "topics": [
       "Hardware product catalogs",
       "Battery specifications",

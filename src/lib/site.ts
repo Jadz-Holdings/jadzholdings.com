@@ -39,8 +39,10 @@ export const ventures = {
     wordmark: spaavs.wordmark,
     descriptor: spaavs.descriptor,
     tagline: spaavs.tagline,
+    taglineParts: spaavs.taglineParts,
     status: spaavs.status,
     href: spaavs.href,
+    externalUrl: spaavs.externalUrl,
   },
   floqmedia: {
     slug: floqmedia.id,
