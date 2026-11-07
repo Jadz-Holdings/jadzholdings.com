@@ -56,8 +56,10 @@ export const interestOptions = [
 export const spaavs = {
   id: "spaavs",
   displayName: "SPAAVS",
-  wordmark: "SPΛΛVS",
+  /** Text fallback only — UI uses approved /brand/spaavs/spaavs-wordmark-clean.png */
+  wordmark: "SPAAVS",
   a11yName: "SPAAVS",
+  logoSrc: "/brand/spaavs/spaavs-wordmark-clean.png",
   descriptor: "Smart Parking & Autonomous Vehicle Services",
   /** Synced from Spaavs.com siteConfig (merged main). */
   tagline: "Beyond Parking. Intelligent Mobility. Autonomous Infrastructure.",

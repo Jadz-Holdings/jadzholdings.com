@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { SpaavsLogo } from "@/components/SpaavsLogo";
 import { damme, floqmedia, pages, spaavs, topvr } from "@/lib/content";
 
 const c = pages.venturesIndex;
@@ -26,9 +27,9 @@ export default function VenturesPage() {
             <div className="split">
               <div>
                 <p className="status-badge spaavs">{spaavs.status}</p>
-                <p className="spaavs-wordmark" aria-label={spaavs.a11yName} style={{ margin: "0.6rem 0" }}>
-                  {spaavs.wordmark}
-                </p>
+                <div className="spaavs-logo-wrap" style={{ margin: "0.6rem 0" }}>
+                  <SpaavsLogo height={52} priority />
+                </div>
                 <p style={{ color: "var(--muted)", fontWeight: 650, marginTop: 0 }}>
                   {spaavs.descriptor}
                 </p>
