@@ -1,11 +1,10 @@
-import { connection } from "next/server";
 import { ContactForm } from "@/components/ContactForm";
 
-export async function ContactFormSection() {
-  await connection();
-  const deliveryConfigured = Boolean(
-    process.env.RESEND_API_KEY && process.env.CONTACT_TO_EMAIL,
-  );
-
-  return <ContactForm deliveryConfigured={deliveryConfigured} />;
+/**
+ * Static Firebase Hosting export has no server runtime for Resend.
+ * Keep mailto/tel as the working contact path (same practical posture as spaavs.com).
+ * When moving to App Hosting / Functions later, restore env-gated delivery here.
+ */
+export function ContactFormSection() {
+  return <ContactForm deliveryConfigured={false} />;
 }
