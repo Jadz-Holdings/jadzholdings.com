@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { SpaavsLogo } from "@/components/SpaavsLogo";
 import { pages, spaavs, floqmedia } from "@/lib/content";
 
 const c = pages.home;
@@ -67,9 +68,9 @@ export default function HomePage() {
           <div className="grid-2" style={{ marginTop: "2rem" }}>
             <article className="venture-card spaavs-theme">
               <p className="status-badge spaavs">{spaavs.status}</p>
-              <p className="spaavs-wordmark" aria-label={spaavs.a11yName} style={{ margin: "0.75rem 0" }}>
-                {spaavs.wordmark}
-              </p>
+              <div className="spaavs-logo-wrap">
+                <SpaavsLogo height={48} />
+              </div>
               <p style={{ color: "var(--muted)", margin: "0 0 0.75rem" }}>{spaavs.descriptor}</p>
               <p style={{ marginBottom: "1.25rem" }}>{spaavs.tagline}</p>
               <Link href={spaavs.href} className="btn btn-spaavs">

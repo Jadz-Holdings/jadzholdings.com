@@ -18,9 +18,10 @@ When updating public copy or design tokens, update **both** `docs/brand/` and `s
 
 ## Stack
 
-- Next.js (App Router)
+- Next.js (App Router) with static export
 - TypeScript
 - Tailwind CSS v4
+- Firebase Hosting (same model as spaavs.com)
 
 ## Local development
 
@@ -31,30 +32,34 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
-## Contact form
+## Contact
 
-Inquiry delivery is handled server-side through Resend when environment variables are set:
-
-- `RESEND_API_KEY`
-- `CONTACT_TO_EMAIL` (defaults conceptually to `info@jadzholdings.com`)
-- `CONTACT_FROM_EMAIL` (verified sender in Resend)
-
-If these are not configured, the contact page identifies the form as unavailable and provides working `mailto:` and `tel:` links.
-
-Copy `.env.example` to `.env.local` for local configuration. Keep credentials out of client code and out of git.
+On Firebase Hosting (static export), the inquiry form is unavailable by design and the page provides working `mailto:` / `tel:` links to `info@jadzholdings.com` and `(571) 628-2444`.
 
 ## Scripts
 
 - `npm run dev` — development server
-- `npm run build` — production build
-- `npm run start` — serve production build
+- `npm run build` — static export to `out/`
 - `npm run lint` — ESLint
 
-## Deploy
+## Deploy (Firebase Hosting)
 
-The app is a standard Next.js project (`vercel.json` included). Connect the GitHub repo to Vercel (or similar) and set:
+Same approach as SPAAVS:
 
-- `NEXT_PUBLIC_SITE_URL=https://jadzholdings.com`
-- `RESEND_API_KEY` / `CONTACT_TO_EMAIL` / `CONTACT_FROM_EMAIL` for form delivery
+```bash
+npm run build
+npx -y firebase-tools@latest use jadzholdings-web
+npx -y firebase-tools@latest deploy --only hosting
+```
 
-Until form env vars are set, the Contact page shows email and phone links instead of a live form.
+Config: `firebase.json`, `.firebaserc`. Output directory: `out/`.
+
+### Custom domain (DNS)
+
+After the first Hosting deploy:
+
+1. In Firebase Console → Hosting → add custom domain `jadzholdings.com` (and `www` if desired).
+2. Add the TXT / A / CNAME records Firebase shows.
+3. Wait for SSL provisioning.
+
+Firebase Hosting typically uses A records pointing at Google hosting IPs (or a CNAME for `www`).

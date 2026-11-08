@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Suspense } from "react";
 import { ContactFormSection } from "@/components/ContactFormSection";
 import { company, pages } from "@/lib/content";
 
@@ -55,9 +54,7 @@ export default function ContactPage() {
 
           <div>
             <h2 style={{ marginTop: 0, fontSize: "1.5rem" }}>{c.form.title}</h2>
-            <Suspense fallback={<div className="form-note">Loading contact options…</div>}>
-              <ContactFormSection />
-            </Suspense>
+            <ContactFormSection />
           </div>
         </div>
       </section>

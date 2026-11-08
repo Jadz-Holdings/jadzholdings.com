@@ -31,7 +31,7 @@ Feature publicly:
 | Damme | Venture | Portfolio listing; limited public detail until supplied |
 | TopVR | Venture | Portfolio listing; limited public detail until supplied |
 
-SPAAVS visual wordmark: **SPΛΛVS**. Accessibility labels and metadata: **SPAAVS**.
+SPAAVS visual identity: use the **approved spaavs.com wordmark** (`public/brand/spaavs/spaavs-wordmark-clean.png`) — black geometric mark with Tiffany dots in the A counters. Do not use a text stand-in such as “SPΛΛVS”. Accessibility labels and metadata: **SPAAVS**. Accent for SPAAVS UI: Tiffany `#0ABAB5`.
 
 SPAAVS tagline (synced from Spaavs.com `siteConfig`, merged main): **Beyond Parking. Intelligent Mobility. Autonomous Infrastructure.**
 
