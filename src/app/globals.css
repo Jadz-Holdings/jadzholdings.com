@@ -14,9 +14,10 @@
   --teal-bright: #3a9aa3;
   --teal-soft: #d7e9eb;
   --metal: #8fa3b5;
-  --spaavs-green: #1f8a4c;
-  --spaavs-green-deep: #146338;
-  --spaavs-green-soft: #e6f5ec;
+  /* Aligned to approved spaavs.com Tiffany accent used with the official wordmark */
+  --spaavs-green: #0abab5;
+  --spaavs-green-deep: #089690;
+  --spaavs-green-soft: #e6f8f7;
   --danger: #b42318;
   --success: #1f7a4c;
   --background: var(--cloud);
@@ -455,12 +456,16 @@ img {
   background: var(--spaavs-green);
 }
 
-.spaavs-wordmark {
-  font-family: var(--font-syne), system-ui, sans-serif;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  color: var(--spaavs-green);
-  font-size: clamp(2rem, 4vw, 3rem);
+.spaavs-logo-wrap,
+.floqmedia-logo-wrap,
+.venture-logo-slot {
+  display: flex;
+  align-items: center;
+  margin: 0.75rem 0;
+  /* Shared brand-mark footprint so SPAAVS and FloqMedia occupy the same page width */
+  width: min(100%, 22rem);
+  text-decoration: none;
+  color: inherit;
 }
 
 .contact-panel {

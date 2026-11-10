@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { FloqMediaLogo } from "@/components/FloqMediaLogo";
+import { SpaavsLogo } from "@/components/SpaavsLogo";
 import { damme, floqmedia, pages, spaavs, topvr } from "@/lib/content";
 
 const c = pages.venturesIndex;
@@ -26,9 +28,9 @@ export default function VenturesPage() {
             <div className="split">
               <div>
                 <p className="status-badge spaavs">{spaavs.status}</p>
-                <p className="spaavs-wordmark" aria-label={spaavs.a11yName} style={{ margin: "0.6rem 0" }}>
-                  {spaavs.wordmark}
-                </p>
+                <div className="venture-logo-slot spaavs-logo-wrap" style={{ margin: "0.6rem 0" }}>
+                  <SpaavsLogo fillSlot priority />
+                </div>
                 <p style={{ color: "var(--muted)", fontWeight: 650, marginTop: 0 }}>
                   {spaavs.descriptor}
                 </p>
@@ -58,25 +60,40 @@ export default function VenturesPage() {
           <article className="venture-card" style={{ paddingTop: "1.75rem" }}>
             <div className="split">
               <div>
-                <p className="status-badge">{floqmedia.status}</p>
-                <h2 style={{ margin: "0.6rem 0", fontSize: "2rem" }}>{floqmedia.displayName}</h2>
+                <Link
+                  href={floqmedia.href}
+                  className="venture-logo-slot floqmedia-logo-wrap"
+                  style={{ margin: "0.6rem 0" }}
+                >
+                  <FloqMediaLogo fillSlot priority />
+                </Link>
                 <p style={{ color: "var(--muted)", fontWeight: 650 }}>{floqmedia.descriptor}</p>
                 {floqmedia.descriptions.map((paragraph) => (
                   <p key={paragraph.slice(0, 48)}>{paragraph}</p>
                 ))}
-                <Link href={floqmedia.href} className="btn btn-outline">
-                  {floqmedia.exploreButton}
-                </Link>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: "0.75rem" }}>
+                  <Link href={floqmedia.href} className="btn btn-outline">
+                    FloqMedia overview
+                  </Link>
+                  <a
+                    href={floqmedia.externalUrl}
+                    className="btn btn-outline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {floqmedia.exploreButton}
+                  </a>
+                </div>
               </div>
               <div
                 className="media-panel"
-                data-label="Concept imagery"
+                data-label="WindowAds concept"
                 style={{
                   ["--media-image" as string]:
-                    'url("https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1600&q=80")',
+                    'url("/brand/floqmedia/WindowAds_Advertising_Beyond_the_Screen_Web.webp")',
                 }}
                 role="img"
-                aria-label="Venue atmosphere concept imagery for FloqMedia"
+                aria-label="WindowAds storefront concept imagery for FloqMedia"
               />
             </div>
           </article>

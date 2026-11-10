@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { FloqMediaLogo } from "@/components/FloqMediaLogo";
 import { floqmedia, pages } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -13,9 +14,15 @@ export default function FloqMediaPage() {
       <section className="page-hero">
         <div className="container">
           <p className="eyebrow">Our Ventures</p>
-          <h1>{floqmedia.displayName}</h1>
+          <h1 className="sr-only">{floqmedia.displayName}</h1>
+          <div
+            className="venture-logo-slot floqmedia-logo-wrap"
+            style={{ margin: "0.85rem 0 0.75rem" }}
+            aria-hidden="true"
+          >
+            <FloqMediaLogo fillSlot priority />
+          </div>
           <p className="lead">{floqmedia.descriptor}</p>
-          <p className="status-badge">{floqmedia.status}</p>
         </div>
       </section>
 
@@ -26,16 +33,25 @@ export default function FloqMediaPage() {
               <p key={paragraph.slice(0, 48)}>{paragraph}</p>
             ))}
             <p style={{ color: "var(--muted)" }}>{floqmedia.publicPhrase}.</p>
+            <a
+              href={floqmedia.externalUrl}
+              className="btn btn-outline"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ marginTop: "0.5rem" }}
+            >
+              {floqmedia.exploreButton}
+            </a>
           </div>
           <div
             className="media-panel"
-            data-label="Concept imagery"
+            data-label="WindowAds concept"
             style={{
               ["--media-image" as string]:
-                'url("https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1600&q=80")',
+                'url("/brand/floqmedia/WindowAds_Advertising_Beyond_the_Screen_Web.webp")',
             }}
             role="img"
-            aria-label="Interactive venue and event atmosphere concept imagery"
+            aria-label="WindowAds storefront concept imagery for FloqMedia"
           />
         </div>
       </section>
@@ -55,7 +71,6 @@ export default function FloqMediaPage() {
         <div className="container grid-2">
           {floqmedia.platforms.map((platform) => (
             <article key={platform.name} className="focus-item">
-              <p className="status-badge">{platform.status}</p>
               <h2 style={{ fontSize: "1.6rem" }}>{platform.name}</h2>
               <p>{platform.description}</p>
             </article>
@@ -63,9 +78,14 @@ export default function FloqMediaPage() {
         </div>
         <div className="container" style={{ marginTop: "2rem" }}>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "0.85rem" }}>
-            <Link href="/partnerships" className="btn btn-primary">
-              Discuss a Partnership
-            </Link>
+            <a
+              href={floqmedia.externalUrl}
+              className="btn btn-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {floqmedia.exploreButton}
+            </a>
             <Link href="/ventures" className="btn btn-outline">
               Back to Our Ventures
             </Link>

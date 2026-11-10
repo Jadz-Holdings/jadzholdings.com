@@ -56,8 +56,10 @@ export const interestOptions = [
 export const spaavs = {
   id: "spaavs",
   displayName: "SPAAVS",
-  wordmark: "SPΛΛVS",
+  /** Text fallback only — UI uses approved /brand/spaavs/spaavs-wordmark-clean.png */
+  wordmark: "SPAAVS",
   a11yName: "SPAAVS",
+  logoSrc: "/brand/spaavs/spaavs-wordmark-clean.png",
   descriptor: "Smart Parking & Autonomous Vehicle Services",
   /** Synced from Spaavs.com siteConfig (merged main). */
   tagline: "Beyond Parking. Intelligent Mobility. Autonomous Infrastructure.",
@@ -95,12 +97,18 @@ export const floqmedia = {
   displayName: "FloqMedia",
   publicPhrase: "FloqMedia, a Jadz Holdings venture",
   descriptor: "Media, technology, and interactive venue experiences.",
-  status: "In development",
+  /** Live venture — do not show an “In development” badge. */
+  status: null,
+  /** Internal Jadz venture overview (FloqR / ShoutOut). */
   href: "/ventures/floqmedia",
+  /** Public FloqMedia site — used by Explore FloqMedia CTA. */
+  externalUrl: "https://floqmedia.com",
+  logoSrc: "/brand/floqmedia/floqmedia-logo-transparent.png",
+  iconSrc: "/brand/floqmedia/floqmedia-icon-transparent.png",
   exploreButton: "Explore FloqMedia",
   descriptions: [
-    "FloqMedia is a developing Jadz Holdings venture focused on connecting brands and people through digital platforms, media, advertising, and interactive experiences.",
-    "Its development includes software applications and digital services designed for restaurants, bars, lounges, clubs, entertainment venues, and other high-traffic environments.",
+    "FloqMedia connects brands and people through digital platforms, media, advertising, and interactive experiences.",
+    "Its work includes software applications and digital services for restaurants, bars, lounges, clubs, entertainment venues, and other high-traffic environments.",
   ],
   focusAreas: [
     "Media and advertising solutions.",
@@ -113,15 +121,15 @@ export const floqmedia = {
   platforms: [
     {
       name: "FloqR",
-      status: "In development",
+      status: null,
       description:
-        "A platform under development within the FloqMedia ecosystem, connecting venue experiences and digital engagement.",
+        "A platform within the FloqMedia ecosystem, connecting venue experiences and digital engagement.",
     },
     {
       name: "ShoutOut",
-      status: "In development",
+      status: null,
       description:
-        "A developing interactive content and display experience within the FloqR ecosystem.",
+        "An interactive content and display experience within the FloqR ecosystem.",
     },
   ],
 } as const;

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { FloqMediaLogo } from "@/components/FloqMediaLogo";
+import { SpaavsLogo } from "@/components/SpaavsLogo";
 import { pages, spaavs, floqmedia } from "@/lib/content";
 
 const c = pages.home;
@@ -67,9 +69,9 @@ export default function HomePage() {
           <div className="grid-2" style={{ marginTop: "2rem" }}>
             <article className="venture-card spaavs-theme">
               <p className="status-badge spaavs">{spaavs.status}</p>
-              <p className="spaavs-wordmark" aria-label={spaavs.a11yName} style={{ margin: "0.75rem 0" }}>
-                {spaavs.wordmark}
-              </p>
+              <div className="venture-logo-slot spaavs-logo-wrap">
+                <SpaavsLogo fillSlot />
+              </div>
               <p style={{ color: "var(--muted)", margin: "0 0 0.75rem" }}>{spaavs.descriptor}</p>
               <p style={{ marginBottom: "1.25rem" }}>{spaavs.tagline}</p>
               <Link href={spaavs.href} className="btn btn-spaavs">
@@ -78,12 +80,18 @@ export default function HomePage() {
             </article>
 
             <article className="venture-card">
-              <p className="status-badge">{floqmedia.status}</p>
-              <h3 style={{ marginTop: "0.75rem" }}>{floqmedia.displayName}</h3>
-              <p style={{ marginBottom: "1.25rem" }}>{floqmedia.descriptor}</p>
-              <Link href={floqmedia.href} className="btn btn-outline">
-                {floqmedia.exploreButton}
+              <Link href={floqmedia.href} className="venture-logo-slot floqmedia-logo-wrap" style={{ marginTop: "0.35rem" }}>
+                <FloqMediaLogo fillSlot />
               </Link>
+              <p style={{ marginBottom: "1.25rem" }}>{floqmedia.descriptor}</p>
+              <a
+                href={floqmedia.externalUrl}
+                className="btn btn-outline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {floqmedia.exploreButton}
+              </a>
             </article>
           </div>
         </div>

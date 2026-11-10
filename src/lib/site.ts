@@ -50,6 +50,9 @@ export const ventures = {
     descriptor: floqmedia.descriptor,
     status: floqmedia.status,
     href: floqmedia.href,
+    externalUrl: floqmedia.externalUrl,
+    logoSrc: floqmedia.logoSrc,
+    iconSrc: floqmedia.iconSrc,
   },
   damme: {
     slug: ventureMap.damme.id,
