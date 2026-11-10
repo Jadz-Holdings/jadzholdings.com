@@ -27,7 +27,7 @@ Feature publicly:
 | Name | Type | Notes |
 |------|------|-------|
 | SPAAVS | Trading name / subsidiary path | Jadz Smart Parking and Autonomous Vehicle Services; subsidiary of Jadz Holdings LLC |
-| FloqMedia | Venture | Include FloqR and ShoutOut on detail page; phrase “FloqMedia, a Jadz Holdings venture” until more specific legal/DBA info is supplied |
+| FloqMedia | Live venture | Use approved floqmedia.com logo assets; no “In development” badge; Explore CTA → https://floqmedia.com; include FloqR and ShoutOut on detail page; phrase “FloqMedia, a Jadz Holdings venture” until more specific legal/DBA info is supplied |
 | Damme | Venture | Portfolio listing; limited public detail until supplied |
 | TopVR | Venture | Portfolio listing; limited public detail until supplied |
 

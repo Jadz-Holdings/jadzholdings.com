@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { FloqMediaLogo } from "@/components/FloqMediaLogo";
 import { SpaavsLogo } from "@/components/SpaavsLogo";
 import { damme, floqmedia, pages, spaavs, topvr } from "@/lib/content";
 
@@ -59,15 +60,21 @@ export default function VenturesPage() {
           <article className="venture-card" style={{ paddingTop: "1.75rem" }}>
             <div className="split">
               <div>
-                <p className="status-badge">{floqmedia.status}</p>
-                <h2 style={{ margin: "0.6rem 0", fontSize: "2rem" }}>{floqmedia.displayName}</h2>
+                <div className="floqmedia-logo-wrap" style={{ margin: "0.6rem 0", maxWidth: "min(100%, 18rem)" }}>
+                  <FloqMediaLogo height={56} priority />
+                </div>
                 <p style={{ color: "var(--muted)", fontWeight: 650 }}>{floqmedia.descriptor}</p>
                 {floqmedia.descriptions.map((paragraph) => (
                   <p key={paragraph.slice(0, 48)}>{paragraph}</p>
                 ))}
-                <Link href={floqmedia.href} className="btn btn-outline">
+                <a
+                  href={floqmedia.href}
+                  className="btn btn-outline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   {floqmedia.exploreButton}
-                </Link>
+                </a>
               </div>
               <div
                 className="media-panel"

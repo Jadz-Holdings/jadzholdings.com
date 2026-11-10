@@ -97,12 +97,15 @@ export const floqmedia = {
   displayName: "FloqMedia",
   publicPhrase: "FloqMedia, a Jadz Holdings venture",
   descriptor: "Media, technology, and interactive venue experiences.",
-  status: "In development",
-  href: "/ventures/floqmedia",
+  /** Live venture — do not show an “In development” badge. */
+  status: null,
+  href: "https://floqmedia.com",
+  logoSrc: "/brand/floqmedia/floqmedia-logo-transparent.png",
+  iconSrc: "/brand/floqmedia/floqmedia-icon-transparent.png",
   exploreButton: "Explore FloqMedia",
   descriptions: [
-    "FloqMedia is a developing Jadz Holdings venture focused on connecting brands and people through digital platforms, media, advertising, and interactive experiences.",
-    "Its development includes software applications and digital services designed for restaurants, bars, lounges, clubs, entertainment venues, and other high-traffic environments.",
+    "FloqMedia connects brands and people through digital platforms, media, advertising, and interactive experiences.",
+    "Its work includes software applications and digital services for restaurants, bars, lounges, clubs, entertainment venues, and other high-traffic environments.",
   ],
   focusAreas: [
     "Media and advertising solutions.",
@@ -115,15 +118,15 @@ export const floqmedia = {
   platforms: [
     {
       name: "FloqR",
-      status: "In development",
+      status: null,
       description:
-        "A platform under development within the FloqMedia ecosystem, connecting venue experiences and digital engagement.",
+        "A platform within the FloqMedia ecosystem, connecting venue experiences and digital engagement.",
     },
     {
       name: "ShoutOut",
-      status: "In development",
+      status: null,
       description:
-        "A developing interactive content and display experience within the FloqR ecosystem.",
+        "An interactive content and display experience within the FloqR ecosystem.",
     },
   ],
 } as const;

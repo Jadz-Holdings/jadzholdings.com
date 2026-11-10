@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { FloqMediaLogo } from "@/components/FloqMediaLogo";
 import { SpaavsLogo } from "@/components/SpaavsLogo";
 import { pages, spaavs, floqmedia } from "@/lib/content";
 
@@ -79,12 +80,18 @@ export default function HomePage() {
             </article>
 
             <article className="venture-card">
-              <p className="status-badge">{floqmedia.status}</p>
-              <h3 style={{ marginTop: "0.75rem" }}>{floqmedia.displayName}</h3>
+              <div className="floqmedia-logo-wrap" style={{ marginTop: "0.35rem" }}>
+                <FloqMediaLogo height={52} />
+              </div>
               <p style={{ marginBottom: "1.25rem" }}>{floqmedia.descriptor}</p>
-              <Link href={floqmedia.href} className="btn btn-outline">
+              <a
+                href={floqmedia.href}
+                className="btn btn-outline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {floqmedia.exploreButton}
-              </Link>
+              </a>
             </article>
           </div>
         </div>

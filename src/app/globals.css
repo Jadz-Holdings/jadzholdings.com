@@ -456,10 +456,15 @@ img {
   background: var(--spaavs-green);
 }
 
-.spaavs-logo-wrap {
+.spaavs-logo-wrap,
+.floqmedia-logo-wrap {
   display: block;
   margin: 0.75rem 0;
   max-width: min(100%, 22rem);
+}
+
+.floqmedia-logo-wrap {
+  max-width: min(100%, 16rem);
 }
 
 .contact-panel {

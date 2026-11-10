@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { FloqMediaLogo } from "@/components/FloqMediaLogo";
 import { floqmedia, pages } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -13,9 +14,13 @@ export default function FloqMediaPage() {
       <section className="page-hero">
         <div className="container">
           <p className="eyebrow">Our Ventures</p>
-          <h1>{floqmedia.displayName}</h1>
+          <div
+            className="floqmedia-logo-wrap"
+            style={{ margin: "0.85rem 0 0.75rem", maxWidth: "min(100%, 22rem)" }}
+          >
+            <FloqMediaLogo height={64} priority />
+          </div>
           <p className="lead">{floqmedia.descriptor}</p>
-          <p className="status-badge">{floqmedia.status}</p>
         </div>
       </section>
 
@@ -26,6 +31,15 @@ export default function FloqMediaPage() {
               <p key={paragraph.slice(0, 48)}>{paragraph}</p>
             ))}
             <p style={{ color: "var(--muted)" }}>{floqmedia.publicPhrase}.</p>
+            <a
+              href={floqmedia.href}
+              className="btn btn-outline"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ marginTop: "0.5rem" }}
+            >
+              {floqmedia.exploreButton}
+            </a>
           </div>
           <div
             className="media-panel"
@@ -55,7 +69,6 @@ export default function FloqMediaPage() {
         <div className="container grid-2">
           {floqmedia.platforms.map((platform) => (
             <article key={platform.name} className="focus-item">
-              <p className="status-badge">{platform.status}</p>
               <h2 style={{ fontSize: "1.6rem" }}>{platform.name}</h2>
               <p>{platform.description}</p>
             </article>
@@ -63,9 +76,14 @@ export default function FloqMediaPage() {
         </div>
         <div className="container" style={{ marginTop: "2rem" }}>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "0.85rem" }}>
-            <Link href="/partnerships" className="btn btn-primary">
-              Discuss a Partnership
-            </Link>
+            <a
+              href={floqmedia.href}
+              className="btn btn-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {floqmedia.exploreButton}
+            </a>
             <Link href="/ventures" className="btn btn-outline">
               Back to Our Ventures
             </Link>
