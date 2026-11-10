@@ -465,6 +465,7 @@ img {
 
 .floqmedia-logo-wrap {
   max-width: min(100%, 16rem);
+  text-decoration: none;
 }
 
 .contact-panel {

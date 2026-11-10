@@ -14,9 +14,11 @@ export default function FloqMediaPage() {
       <section className="page-hero">
         <div className="container">
           <p className="eyebrow">Our Ventures</p>
+          <h1 className="sr-only">{floqmedia.displayName}</h1>
           <div
             className="floqmedia-logo-wrap"
             style={{ margin: "0.85rem 0 0.75rem", maxWidth: "min(100%, 22rem)" }}
+            aria-hidden="true"
           >
             <FloqMediaLogo height={64} priority />
           </div>
@@ -32,7 +34,7 @@ export default function FloqMediaPage() {
             ))}
             <p style={{ color: "var(--muted)" }}>{floqmedia.publicPhrase}.</p>
             <a
-              href={floqmedia.href}
+              href={floqmedia.externalUrl}
               className="btn btn-outline"
               target="_blank"
               rel="noopener noreferrer"
@@ -77,7 +79,7 @@ export default function FloqMediaPage() {
         <div className="container" style={{ marginTop: "2rem" }}>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "0.85rem" }}>
             <a
-              href={floqmedia.href}
+              href={floqmedia.externalUrl}
               className="btn btn-primary"
               target="_blank"
               rel="noopener noreferrer"

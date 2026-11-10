@@ -99,7 +99,10 @@ export const floqmedia = {
   descriptor: "Media, technology, and interactive venue experiences.",
   /** Live venture — do not show an “In development” badge. */
   status: null,
-  href: "https://floqmedia.com",
+  /** Internal Jadz venture overview (FloqR / ShoutOut). */
+  href: "/ventures/floqmedia",
+  /** Public FloqMedia site — used by Explore FloqMedia CTA. */
+  externalUrl: "https://floqmedia.com",
   logoSrc: "/brand/floqmedia/floqmedia-logo-transparent.png",
   iconSrc: "/brand/floqmedia/floqmedia-icon-transparent.png",
   exploreButton: "Explore FloqMedia",

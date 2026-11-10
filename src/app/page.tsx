@@ -80,12 +80,12 @@ export default function HomePage() {
             </article>
 
             <article className="venture-card">
-              <div className="floqmedia-logo-wrap" style={{ marginTop: "0.35rem" }}>
+              <Link href={floqmedia.href} className="floqmedia-logo-wrap" style={{ marginTop: "0.35rem" }}>
                 <FloqMediaLogo height={52} />
-              </div>
+              </Link>
               <p style={{ marginBottom: "1.25rem" }}>{floqmedia.descriptor}</p>
               <a
-                href={floqmedia.href}
+                href={floqmedia.externalUrl}
                 className="btn btn-outline"
                 target="_blank"
                 rel="noopener noreferrer"

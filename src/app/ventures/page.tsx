@@ -60,21 +60,30 @@ export default function VenturesPage() {
           <article className="venture-card" style={{ paddingTop: "1.75rem" }}>
             <div className="split">
               <div>
-                <div className="floqmedia-logo-wrap" style={{ margin: "0.6rem 0", maxWidth: "min(100%, 18rem)" }}>
+                <Link
+                  href={floqmedia.href}
+                  className="floqmedia-logo-wrap"
+                  style={{ margin: "0.6rem 0", maxWidth: "min(100%, 18rem)" }}
+                >
                   <FloqMediaLogo height={56} priority />
-                </div>
+                </Link>
                 <p style={{ color: "var(--muted)", fontWeight: 650 }}>{floqmedia.descriptor}</p>
                 {floqmedia.descriptions.map((paragraph) => (
                   <p key={paragraph.slice(0, 48)}>{paragraph}</p>
                 ))}
-                <a
-                  href={floqmedia.href}
-                  className="btn btn-outline"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {floqmedia.exploreButton}
-                </a>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: "0.75rem" }}>
+                  <Link href={floqmedia.href} className="btn btn-outline">
+                    FloqMedia overview
+                  </Link>
+                  <a
+                    href={floqmedia.externalUrl}
+                    className="btn btn-outline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {floqmedia.exploreButton}
+                  </a>
+                </div>
               </div>
               <div
                 className="media-panel"
