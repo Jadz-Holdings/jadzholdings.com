@@ -2,10 +2,12 @@ import Image from "next/image";
 
 type FloqMediaLogoProps = {
   className?: string;
-  /** Visual height in pixels for the approved FloqMedia wordmark. */
+  /** Visual height in pixels when not filling a shared venture logo slot. */
   height?: number;
   priority?: boolean;
   variant?: "logo" | "icon";
+  /** Stretch to the shared venture logo slot width (matches SPAAVS footprint). */
+  fillSlot?: boolean;
 };
 
 /**
@@ -16,6 +18,7 @@ export function FloqMediaLogo({
   height = 48,
   priority = false,
   variant = "logo",
+  fillSlot = false,
 }: FloqMediaLogoProps) {
   if (variant === "icon") {
     const size = height;
@@ -38,7 +41,7 @@ export function FloqMediaLogo({
   const width = Math.round(height * aspect);
 
   return (
-    <span className={`inline-flex items-center ${className}`}>
+    <span className={`inline-flex items-center ${className}`} style={fillSlot ? { width: "100%" } : undefined}>
       <Image
         src="/brand/floqmedia/floqmedia-logo-transparent.png"
         alt="FloqMedia"
@@ -46,7 +49,7 @@ export function FloqMediaLogo({
         height={height}
         priority={priority}
         className="h-auto w-auto max-w-full select-none"
-        style={{ height, width: "auto" }}
+        style={fillSlot ? { width: "100%", height: "auto" } : { height, width: "auto" }}
       />
     </span>
   );

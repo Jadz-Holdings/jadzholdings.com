@@ -16,11 +16,11 @@ export default function FloqMediaPage() {
           <p className="eyebrow">Our Ventures</p>
           <h1 className="sr-only">{floqmedia.displayName}</h1>
           <div
-            className="floqmedia-logo-wrap"
-            style={{ margin: "0.85rem 0 0.75rem", maxWidth: "min(100%, 22rem)" }}
+            className="venture-logo-slot floqmedia-logo-wrap"
+            style={{ margin: "0.85rem 0 0.75rem" }}
             aria-hidden="true"
           >
-            <FloqMediaLogo height={64} priority />
+            <FloqMediaLogo fillSlot priority />
           </div>
           <p className="lead">{floqmedia.descriptor}</p>
         </div>
@@ -45,13 +45,13 @@ export default function FloqMediaPage() {
           </div>
           <div
             className="media-panel"
-            data-label="Concept imagery"
+            data-label="WindowAds concept"
             style={{
               ["--media-image" as string]:
-                'url("https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1600&q=80")',
+                'url("/brand/floqmedia/WindowAds_Advertising_Beyond_the_Screen_Web.webp")',
             }}
             role="img"
-            aria-label="Interactive venue and event atmosphere concept imagery"
+            aria-label="WindowAds storefront concept imagery for FloqMedia"
           />
         </div>
       </section>

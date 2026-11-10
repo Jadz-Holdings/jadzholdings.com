@@ -69,8 +69,8 @@ export default function HomePage() {
           <div className="grid-2" style={{ marginTop: "2rem" }}>
             <article className="venture-card spaavs-theme">
               <p className="status-badge spaavs">{spaavs.status}</p>
-              <div className="spaavs-logo-wrap">
-                <SpaavsLogo height={48} />
+              <div className="venture-logo-slot spaavs-logo-wrap">
+                <SpaavsLogo fillSlot />
               </div>
               <p style={{ color: "var(--muted)", margin: "0 0 0.75rem" }}>{spaavs.descriptor}</p>
               <p style={{ marginBottom: "1.25rem" }}>{spaavs.tagline}</p>
@@ -80,8 +80,8 @@ export default function HomePage() {
             </article>
 
             <article className="venture-card">
-              <Link href={floqmedia.href} className="floqmedia-logo-wrap" style={{ marginTop: "0.35rem" }}>
-                <FloqMediaLogo height={52} />
+              <Link href={floqmedia.href} className="venture-logo-slot floqmedia-logo-wrap" style={{ marginTop: "0.35rem" }}>
+                <FloqMediaLogo fillSlot />
               </Link>
               <p style={{ marginBottom: "1.25rem" }}>{floqmedia.descriptor}</p>
               <a

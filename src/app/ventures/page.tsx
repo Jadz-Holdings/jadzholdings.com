@@ -28,8 +28,8 @@ export default function VenturesPage() {
             <div className="split">
               <div>
                 <p className="status-badge spaavs">{spaavs.status}</p>
-                <div className="spaavs-logo-wrap" style={{ margin: "0.6rem 0" }}>
-                  <SpaavsLogo height={52} priority />
+                <div className="venture-logo-slot spaavs-logo-wrap" style={{ margin: "0.6rem 0" }}>
+                  <SpaavsLogo fillSlot priority />
                 </div>
                 <p style={{ color: "var(--muted)", fontWeight: 650, marginTop: 0 }}>
                   {spaavs.descriptor}
@@ -62,10 +62,10 @@ export default function VenturesPage() {
               <div>
                 <Link
                   href={floqmedia.href}
-                  className="floqmedia-logo-wrap"
-                  style={{ margin: "0.6rem 0", maxWidth: "min(100%, 18rem)" }}
+                  className="venture-logo-slot floqmedia-logo-wrap"
+                  style={{ margin: "0.6rem 0" }}
                 >
-                  <FloqMediaLogo height={56} priority />
+                  <FloqMediaLogo fillSlot priority />
                 </Link>
                 <p style={{ color: "var(--muted)", fontWeight: 650 }}>{floqmedia.descriptor}</p>
                 {floqmedia.descriptions.map((paragraph) => (
@@ -87,13 +87,13 @@ export default function VenturesPage() {
               </div>
               <div
                 className="media-panel"
-                data-label="Concept imagery"
+                data-label="WindowAds concept"
                 style={{
                   ["--media-image" as string]:
-                    'url("https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1600&q=80")',
+                    'url("/brand/floqmedia/WindowAds_Advertising_Beyond_the_Screen_Web.webp")',
                 }}
                 role="img"
-                aria-label="Venue atmosphere concept imagery for FloqMedia"
+                aria-label="WindowAds storefront concept imagery for FloqMedia"
               />
             </div>
           </article>

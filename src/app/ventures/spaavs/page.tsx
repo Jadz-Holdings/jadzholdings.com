@@ -14,8 +14,8 @@ export default function SpaavsPage() {
       <section className="page-hero">
         <div className="container">
           <p className="eyebrow">Our Ventures</p>
-          <div className="spaavs-logo-wrap" style={{ margin: "0.85rem 0 0.4rem", maxWidth: "min(100%, 28rem)" }}>
-            <SpaavsLogo height={64} priority />
+          <div className="venture-logo-slot spaavs-logo-wrap" style={{ margin: "0.85rem 0 0.4rem" }}>
+            <SpaavsLogo fillSlot priority />
           </div>
           <p style={{ color: "var(--muted)", fontWeight: 650, margin: 0 }}>{spaavs.descriptor}</p>
           <h1 style={{ maxWidth: "22ch", marginTop: "0.85rem", fontSize: "clamp(1.6rem, 3.2vw, 2.4rem)" }}>

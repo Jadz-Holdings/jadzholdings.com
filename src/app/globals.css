@@ -457,15 +457,15 @@ img {
 }
 
 .spaavs-logo-wrap,
-.floqmedia-logo-wrap {
-  display: block;
+.floqmedia-logo-wrap,
+.venture-logo-slot {
+  display: flex;
+  align-items: center;
   margin: 0.75rem 0;
-  max-width: min(100%, 22rem);
-}
-
-.floqmedia-logo-wrap {
-  max-width: min(100%, 16rem);
+  /* Shared brand-mark footprint so SPAAVS and FloqMedia occupy the same page width */
+  width: min(100%, 22rem);
   text-decoration: none;
+  color: inherit;
 }
 
 .contact-panel {
