@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ObfuscatedEmail } from "@/components/ObfuscatedEmail";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -51,8 +52,7 @@ export default function TermsPage() {
           <div>
             <h2 style={{ fontSize: "1.35rem" }}>Contact</h2>
             <p>
-              Questions about these terms may be sent to{" "}
-              <a href={`mailto:${site.email}`}>{site.email}</a>.
+              Questions about these terms may be sent to <ObfuscatedEmail />.
             </p>
           </div>
           <p style={{ color: "var(--muted)", fontSize: "0.92rem" }}>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ContactFormSection } from "@/components/ContactFormSection";
+import { ObfuscatedEmail } from "@/components/ObfuscatedEmail";
 import { company, pages } from "@/lib/content";
 
 const c = pages.contact;
@@ -27,7 +28,7 @@ export default function ContactPage() {
               <div>
                 <dt>Email</dt>
                 <dd>
-                  <a href={`mailto:${company.email}`}>{company.email}</a>
+                  <ObfuscatedEmail />
                 </dd>
               </div>
               <div>

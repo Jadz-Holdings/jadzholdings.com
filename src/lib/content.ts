@@ -8,7 +8,12 @@ export const company = {
   publicName: "Jadz Holdings",
   legalName: "Jadz Holdings LLC",
   founder: "Don Banyong",
-  email: "info@jadzholdings.com",
+  /**
+   * Contact mailbox parts only — never interpolate a contiguous address into
+   * SSR HTML. Use `<ObfuscatedEmail />` for on-page display / mailto links.
+   */
+  emailLocal: "info",
+  emailDomain: "jadzholdings.com",
   phoneDisplay: "(571) 628-2444",
   phoneTel: "+15716282444",
   mailingAddress: {
@@ -304,14 +309,15 @@ export const pages = {
     closing: {
       copy: "Tell us about your organization, the opportunity you see, and where you believe our work could connect.",
       button: { label: "Discuss a Partnership", href: "/contact" },
-      directContactLine: "Email info@jadzholdings.com or call (571) 628-2444.",
+      directContactLinePrefix: "Email",
+      directContactLineSuffix: "or call",
     },
   },
   contact: {
     seo: {
       title: "Contact Jadz Holdings",
       description:
-        "Contact Jadz Holdings at info@jadzholdings.com or (571) 628-2444 to discuss our ventures, partnerships, and business opportunities.",
+        "Contact Jadz Holdings by phone at (571) 628-2444 or through the inquiry page to discuss ventures, partnerships, and business opportunities.",
     },
     headline: "Let’s connect.",
     introduction: "Contact Jadz Holdings to discuss a venture, partnership, or business opportunity.",
@@ -320,7 +326,7 @@ export const pages = {
       submitLabel: "Send Inquiry",
       successMessage: "Thank you for contacting Jadz Holdings. Your inquiry has been received.",
       errorMessage:
-        "We couldn’t send your message. Please try again or email info@jadzholdings.com.",
+        "We couldn’t send your message. Please try again or email us using the address on this page.",
       unavailableMessage:
         "The online inquiry form is currently unavailable. Please contact us directly:",
       marketingConsentLabel:

@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import { ObfuscatedEmail } from "@/components/ObfuscatedEmail";
 import { company, interestOptions, pages } from "@/lib/content";
 
 type Status = "idle" | "submitting" | "success" | "error";
@@ -16,9 +17,7 @@ export function ContactForm({ deliveryConfigured }: { deliveryConfigured: boolea
         <p style={{ margin: "0 0 0.75rem" }}>{formCopy.unavailableMessage}</p>
         <p style={{ margin: "0 0 0.35rem" }}>
           Email{" "}
-          <a href={`mailto:${company.email}`} style={{ color: "var(--teal)", fontWeight: 700 }}>
-            {company.email}
-          </a>
+          <ObfuscatedEmail style={{ color: "var(--teal)", fontWeight: 700 }} />
         </p>
         <p style={{ margin: 0 }}>
           Call{" "}

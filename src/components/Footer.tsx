@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ObfuscatedEmail } from "@/components/ObfuscatedEmail";
 import { company, footer, navigation } from "@/lib/content";
 
 export function Footer() {
@@ -10,7 +11,7 @@ export function Footer() {
             <p className="footer-brand">{footer.brand}</p>
             <p style={{ maxWidth: "28rem", margin: "0 0 1.25rem" }}>{footer.supportingLine}</p>
             <p style={{ margin: "0 0 0.35rem" }}>
-              <a href={`mailto:${company.email}`}>{company.email}</a>
+              <ObfuscatedEmail />
             </p>
             <p style={{ margin: "0 0 0.35rem" }}>
               <a href={`tel:${company.phoneTel}`}>{company.phoneDisplay}</a>
