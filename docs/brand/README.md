@@ -15,6 +15,8 @@ Canonical memory for the **jadzholdings.com** corporate marketing website.
 
 **Last updated:** 2026-11-13 (America/New_York)
 
+**Session start:** Always read `SECURITY.md` first and remind the user of any **unset** controls (currently: form-only contact).
+
 **Contact form:** Unavailable by design on static Hosting. Planned enablement = Formspree-style (see `CONTACT_FORM_REMINDER.md`). Do not implement until user asks. When enabling, also switch to **form-only contact** (no public email) — see `SECURITY.md`.
 
 **Spaavs sync:** SPAAVS tagline = `Beyond Parking. Intelligent Mobility. Autonomous Infrastructure.` from Spaavs.com `siteConfig` (merged main).
