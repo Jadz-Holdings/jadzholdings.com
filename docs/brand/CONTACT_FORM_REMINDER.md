@@ -55,3 +55,7 @@
 ## Decision lock
 
 Until the user says otherwise: **Formspree-style on static Hosting** is the planned enablement path.
+
+## Security follow-on (user request 2026-11-13)
+
+When the form is turned on, also move to **form-only contact** (remove public email / mailto from the site). Details in `SECURITY.md`. Remind the user of this whenever they ask to enable the form.
