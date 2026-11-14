@@ -9,12 +9,15 @@ Canonical memory for the **jadzholdings.com** corporate marketing website.
 | `site-content.md` | Human-readable mirror of all page content |
 | `scope-rules.md` | Positioning, inclusions, exclusions, claim boundaries |
 | `CONTACT_FORM_REMINDER.md` | Deferred: how to turn on Formspree-style contact form (no Blaze) |
+| `SECURITY.md` | Security notes — email harvesting, deferred **form-only** contact |
 
 **Repo alignment:** Application content lives in `src/lib/content.ts` (and related modules) and must stay consistent with `site-content.json`.
 
-**Last updated:** 2026-11-07 (America/New_York)
+**Last updated:** 2026-11-13 (America/New_York)
 
-**Contact form:** Unavailable by design on static Hosting. Planned enablement = Formspree-style (see `CONTACT_FORM_REMINDER.md`). Do not implement until user asks.
+**Session start:** Always read `SECURITY.md` first and remind the user of any **unset** controls (currently: form-only contact).
+
+**Contact form:** Unavailable by design on static Hosting. Planned enablement = Formspree-style (see `CONTACT_FORM_REMINDER.md`). Do not implement until user asks. When enabling, also switch to **form-only contact** (no public email) — see `SECURITY.md`.
 
 **Spaavs sync:** SPAAVS tagline = `Beyond Parking. Intelligent Mobility. Autonomous Infrastructure.` from Spaavs.com `siteConfig` (merged main).
 

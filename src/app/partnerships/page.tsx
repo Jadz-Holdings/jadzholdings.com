@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ObfuscatedEmail } from "@/components/ObfuscatedEmail";
 import { company, pages } from "@/lib/content";
 
 const c = pages.partnerships;
@@ -38,11 +39,8 @@ export default function PartnershipsPage() {
             {c.closing.button.label}
           </Link>
           <p style={{ marginTop: "1.25rem", color: "rgba(255,255,255,0.8)" }}>
-            Email{" "}
-            <a href={`mailto:${company.email}`} style={{ color: "white", fontWeight: 700 }}>
-              {company.email}
-            </a>{" "}
-            or call{" "}
+            <ObfuscatedEmail style={{ color: "white", fontWeight: 700 }} />{" "}
+            {c.closing.directContactLineSuffix}{" "}
             <a href={`tel:${company.phoneTel}`} style={{ color: "white", fontWeight: 700 }}>
               {company.phoneDisplay}
             </a>

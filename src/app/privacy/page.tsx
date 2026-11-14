@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ObfuscatedEmail } from "@/components/ObfuscatedEmail";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -51,9 +52,8 @@ export default function PrivacyPage() {
           <div>
             <h2 style={{ fontSize: "1.35rem" }}>Contact</h2>
             <p>
-              For privacy questions about this website, email{" "}
-              <a href={`mailto:${site.email}`}>{site.email}</a> or write to {site.legalName} at{" "}
-              {site.addressInline}.
+              For privacy questions about this website, use <ObfuscatedEmail /> or write to{" "}
+              {site.legalName} at {site.addressInline}.
             </p>
           </div>
           <p style={{ color: "var(--muted)", fontSize: "0.92rem" }}>

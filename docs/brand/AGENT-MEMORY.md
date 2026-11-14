@@ -4,13 +4,18 @@
 
 Canonical brand, design, and public content for **jadzholdings.com**:
 
-→ **[`jadz-holdings/README.md`](./jadz-holdings/README.md)**
+→ Store: `/cursor/stores/self/jadz-holdings/README.md`  
+→ Repo mirror: `docs/brand/`
 
 | File | Contents |
 |------|----------|
-| `jadz-holdings/design-system.md` | Palette, typography, layout, motion, a11y |
-| `jadz-holdings/site-content.json` | Full structured site copy + SEO + ventures |
-| `jadz-holdings/site-content.md` | Human-readable site copy |
-| `jadz-holdings/scope-rules.md` | Inclusions, exclusions, claim boundaries |
+| `design-system.md` | Palette, typography, layout, motion, a11y |
+| `site-content.json` | Full structured site copy + SEO + ventures |
+| `site-content.md` | Human-readable site copy |
+| `scope-rules.md` | Inclusions, exclusions, claim boundaries |
+| `CONTACT_FORM_REMINDER.md` | Deferred Formspree-style contact form |
+| `SECURITY.md` | **Read every session** — unset controls (form-only contact) |
+
+**Session start:** Read `SECURITY.md` and remind the user of any unset security controls before other work.
 
 Repo mirrors: `docs/brand/*` and typed module `src/lib/content.ts`.
