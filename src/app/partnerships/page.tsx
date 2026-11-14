@@ -39,7 +39,6 @@ export default function PartnershipsPage() {
             {c.closing.button.label}
           </Link>
           <p style={{ marginTop: "1.25rem", color: "rgba(255,255,255,0.8)" }}>
-            {c.closing.directContactLinePrefix}{" "}
             <ObfuscatedEmail style={{ color: "white", fontWeight: 700 }} />{" "}
             {c.closing.directContactLineSuffix}{" "}
             <a href={`tel:${company.phoneTel}`} style={{ color: "white", fontWeight: 700 }}>

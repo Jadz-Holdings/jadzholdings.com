@@ -3,18 +3,16 @@
 import { useEffect, useState, type CSSProperties } from "react";
 
 /**
- * Contact email assembled only after hydration.
- * Keeps a contiguous address out of static HTML so naive scrapers cannot
- * regex-harvest mailto:/user@domain from the page source.
- * This slows commodity harvesters; it does not stop bots that execute JS.
+ * Stronger than at/dot substitution: the address never appears in static HTML
+ * (no contiguous mailbox, no mailto:, no "at"/"dot" plaintext).
+ * Reconstructed client-side after hydration from opaque base64 parts.
+ * Blocks most HTML regex harvesters; bots that execute JS can still recover it.
  */
-const EMAIL_CODES = [
-  105, 110, 102, 111, 64, 106, 97, 100, 122, 104, 111, 108, 100, 105, 110, 103,
-  115, 46, 99, 111, 109,
-] as const;
+const LOCAL_B64 = "aW5mbw==";
+const DOMAIN_B64 = "amFkemhvbGRpbmdzLmNvbQ==";
 
 function decodeEmail() {
-  return String.fromCharCode(...EMAIL_CODES);
+  return `${atob(LOCAL_B64)}@${atob(DOMAIN_B64)}`;
 }
 
 type ObfuscatedEmailProps = {
@@ -22,9 +20,19 @@ type ObfuscatedEmailProps = {
   style?: CSSProperties;
   /** When false, render decoded text only (no mailto). Default true. */
   link?: boolean;
+  /**
+   * Pre-hydration label. Must not look like an email address.
+   * Default: "Email us"
+   */
+  placeholder?: string;
 };
 
-export function ObfuscatedEmail({ className, style, link = true }: ObfuscatedEmailProps) {
+export function ObfuscatedEmail({
+  className,
+  style,
+  link = true,
+  placeholder = "Email us",
+}: ObfuscatedEmailProps) {
   const [email, setEmail] = useState("");
 
   useEffect(() => {
@@ -34,7 +42,7 @@ export function ObfuscatedEmail({ className, style, link = true }: ObfuscatedEma
   if (!email) {
     return (
       <span className={className} style={style}>
-        info [at] jadzholdings [dot] com
+        {placeholder}
       </span>
     );
   }

@@ -52,7 +52,7 @@ export default function TermsPage() {
           <div>
             <h2 style={{ fontSize: "1.35rem" }}>Contact</h2>
             <p>
-              Questions about these terms may be sent to <ObfuscatedEmail />.
+              Questions about these terms may be sent via <ObfuscatedEmail />.
             </p>
           </div>
           <p style={{ color: "var(--muted)", fontSize: "0.92rem" }}>

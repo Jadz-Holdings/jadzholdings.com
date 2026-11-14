@@ -309,7 +309,6 @@ export const pages = {
     closing: {
       copy: "Tell us about your organization, the opportunity you see, and where you believe our work could connect.",
       button: { label: "Discuss a Partnership", href: "/contact" },
-      directContactLinePrefix: "Email",
       directContactLineSuffix: "or call",
     },
   },

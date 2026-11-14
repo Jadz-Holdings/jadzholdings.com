@@ -16,7 +16,6 @@ export function ContactForm({ deliveryConfigured }: { deliveryConfigured: boolea
       <div className="form-note" role="status">
         <p style={{ margin: "0 0 0.75rem" }}>{formCopy.unavailableMessage}</p>
         <p style={{ margin: "0 0 0.35rem" }}>
-          Email{" "}
           <ObfuscatedEmail style={{ color: "var(--teal)", fontWeight: 700 }} />
         </p>
         <p style={{ margin: 0 }}>

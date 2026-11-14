@@ -52,7 +52,7 @@ export default function PrivacyPage() {
           <div>
             <h2 style={{ fontSize: "1.35rem" }}>Contact</h2>
             <p>
-              For privacy questions about this website, email <ObfuscatedEmail /> or write to{" "}
+              For privacy questions about this website, use <ObfuscatedEmail /> or write to{" "}
               {site.legalName} at {site.addressInline}.
             </p>
           </div>
